@@ -4,8 +4,8 @@ count = 0
 lives = 3
 
 while lives>0:
-    n = random.randint(0, 10)
-    m = random.randint(0, 10)
+    n = random.randint(-10, 10)
+    m = random.randint(-10, 10)
     s = n + m
 
     an = int(input(f'Введите ответ: {n} + {m} = '))
