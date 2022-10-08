@@ -33,10 +33,13 @@ def sh_contact(dict):
     for i in dict:
         print(i, dict[i])
 
+def delete(name):
+    name = name(name)
+    list.pop(name, 'Такого контакта нет')
+    print("Контакт успешно удален")
 
 def menu():
-    print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Выход')
-
+    print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Удалить контакт \n4. Выход')
 
 list = {}
 
@@ -48,6 +51,8 @@ while True:
     if p == 2:
         sh_contact(list)
     if p == 3:
+        delete(list, name())
+    if p == 4:
         print("Спасибо за использование")
         break
 
