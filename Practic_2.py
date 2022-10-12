@@ -1,5 +1,3 @@
-dict = {}
-
 def get_name():
     name = input("Введите имя контакта: ")
     name = name.title()
@@ -58,7 +56,7 @@ def ch_contact(dict, name, number):
 #         print('Контакт успешно добавлен')
 #         return(dict)
 
-def menu():
+def menu(dict):
     print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Удалить контакт \n4. Изменить номер телефона \n5. Выход')
     while True:
         menu()
@@ -75,3 +73,6 @@ def menu():
             print("Спасибо за использование")
             break
 
+dict = {}
+
+menu(dict)
