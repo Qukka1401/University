@@ -29,7 +29,12 @@ def contact(dict, name, number):
     print('Контакт добавлен')
     return dict
 
-
+def check_list(dict, name):
+    if not(name in dict):
+        print('Номера телефона нет в списке контактов')
+        return False
+    else:
+        return True
 def sh_contact(dict):
     print("Список контактов:")
     for i in dict:
@@ -39,13 +44,19 @@ def delete_contact(name):
     if True:
         print(dict.pop(name, 'Такого контакта нет'))
     else:
-        print("Контакт успешно удален")
+        print('Контакт успешно удален')
 
 def ch_contact(dict, name, number):
     if name in dict:
         dict[name] = number
     else:
         print('Такого контакта нет')
+
+# def ch_contact(dict, name):
+#     if check_list(dict, name) == True:
+#         dict[name] = get_number()
+#         print('Контакт успешно добавлен')
+#         return(dict)
 
 def menu():
     print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Удалить контакт \n4. Изменить номер телефона \n5. Выход')
