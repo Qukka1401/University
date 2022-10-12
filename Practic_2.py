@@ -21,7 +21,7 @@ def get_number():
         return number
     else:
         print('Неправильно набран номер!')
-        return number()
+        return get_number()
 
 
 def contact(dict, name, number):
@@ -60,19 +60,18 @@ def ch_contact(dict, name, number):
 
 def menu():
     print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Удалить контакт \n4. Изменить номер телефона \n5. Выход')
-
-while True:
-    menu()
-    p = int(input())
-    if p == 1:
-        contact(dict, get_name(), get_number())
-    if p == 2:
-        sh_contact(dict)
-    if p == 3:
-        delete_contact(get_name())
-    if p == 4:
-        ch_contact(get_name(), get_number())
-    if p == 5:
-        print("Спасибо за использование")
-        break
+    while True:
+        menu()
+        p = int(input())
+        if p == 1:
+            contact(dict, get_name(), get_number())
+        if p == 2:
+            sh_contact(dict)
+        if p == 3:
+            delete_contact(get_name())
+        if p == 4:
+            ch_contact(get_name(), get_number())
+        if p == 5:
+            print("Спасибо за использование")
+            break
 
