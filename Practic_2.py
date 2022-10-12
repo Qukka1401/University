@@ -1,3 +1,5 @@
+dict = {}
+
 def get_name():
     name = input("Введите имя контакта: ")
     name = name.title()
@@ -34,29 +36,29 @@ def sh_contact(dict):
         print(i, dict[i])
 
 def delete_contact(name):
-    print(list.pop(name, 'Такого контакта нет'))
-    print("Контакт успешно удален")
+    if True:
+        print(dict.pop(name, 'Такого контакта нет'))
+    else:
+        print("Контакт успешно удален")
 
-def ch_contact(name, number):
-    if name in list:
-        list[name] = number
+def ch_contact(dict, name, number):
+    if name in dict:
+        dict[name] = number
     else:
         print('Такого контакта нет')
 
 def menu():
     print(f'Выберите действие: \n1. Добавить контанкт \n2. Просмотреть список контактов \n3. Удалить контакт \n4. Изменить номер телефона \n5. Выход')
 
-list = {}
-
 while True:
     menu()
     p = int(input())
     if p == 1:
-        contact(list, get_name(), get_number())
+        contact(dict, get_name(), get_number())
     if p == 2:
-        sh_contact(list)
+        sh_contact(dict)
     if p == 3:
-        delete_contact(list, get_name())
+        delete_contact(get_name())
     if p == 4:
         ch_contact(get_name(), get_number())
     if p == 5:
