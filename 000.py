@@ -1,1 +1,1 @@
-import practic_3
+import Practic_3
