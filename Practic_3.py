@@ -33,7 +33,7 @@ def rad_to_deg(rad):
     '''
     return rad* (180/pi)
 
-if __name__ == "__main__":
+def main():
     print(__name__)
 
     print(gms(36.97))
@@ -41,3 +41,5 @@ if __name__ == "__main__":
     print(deg_to_rad(36.97))
     print(rad_to_deg(0.6452482244623036))
     print((dir()))
+if __name__ == "__main__":
+    main()
