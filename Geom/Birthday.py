@@ -12,5 +12,4 @@ def birthday(interp, people_count=23):
             c.append(age)
     return count/(interp/100)
 
-print(birthday(100000, 60))
 
