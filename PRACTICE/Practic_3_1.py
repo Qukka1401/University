@@ -1,14 +1,12 @@
 import Practic_3
 def create_list(*args, **kwargs):
-    response = []
-
-    for idx, value in enumerate(args):
-        response.append(f"Point_{idx} = {dcalc.deg_to_gms(value)}")
+    r = []
+    for idx, val in enumerate(args):
+        r.append(f"Point_{idx} = {Practic_3.gms(val)}")
 
     for k, v in kwargs.items():
-        response.append(f"{k} = {dcalc.deg_to_gms(v)}")
-
-    return response
+        r.append(f"{k} = {Practic_3.gms(v)}")
+    return r
 
 
 print(
