@@ -15,3 +15,4 @@ def monti_hall():
             print(f'Неправильный ответ! Жизней: {lives - 1}')
             lives -= 1
     print(f'Игра окончена! Жизни закончились! Правильно решенных примеров {count}.')
+print(monti_hall())
