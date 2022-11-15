@@ -1,7 +1,5 @@
-list = [s for s in input().split()]
+num = [int(s) for s in input('Числа: ').split()]
 
-for i in list:
-    if int(i) % 2 == 0:
-        list.remove(i)
-
-print(" ".join(list))
+for num in num:
+    if num%2!=0:
+        print(num)
