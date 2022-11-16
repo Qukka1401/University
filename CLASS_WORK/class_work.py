@@ -25,7 +25,20 @@ def f(*args):
     return z
 print(f(1,2,3,5,6))
 
+import sys
+print(sys.path) # список путей где пайтон ищет модули(путь к модулям)
 
+
+
+#Набор для исключений ошибок
+#try:
+#pass
+#expect:
+#pass
+#else:
+#pass
+#finally
+#pass
 
 def f(*args, **kwargs):
     z = 1
@@ -34,3 +47,6 @@ def f(*args, **kwargs):
     for j in kwargs:
         print(i, kwargs[j])
 f(1,2,3,5,6, x = 2, c = 8)
+
+
+
