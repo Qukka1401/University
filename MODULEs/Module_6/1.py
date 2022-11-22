@@ -1,5 +1,5 @@
-num = [int(s) for s in input('Числа: ').split()]
+lst = [int(s) for s in input('Числа: ').split()]
 
-for num in num:
-    if num%2!=0:
-        print(num)
+for lst in lst:
+    if lst%2!=0:
+        print(lst)
