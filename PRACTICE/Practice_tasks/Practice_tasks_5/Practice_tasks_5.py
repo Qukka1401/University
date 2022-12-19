@@ -19,7 +19,12 @@ def s(filename):
     except:
         return 'Неизвестная ошибка'
     finally:
-        f.close()
-
+        try:
+            f.close()
+        except NameError:
+            print('Неверное название')
+        except Exception as ex:
+            print(ex)
+            pass
 filename = input('Введите имя файла: ')
 print(s(filename))
