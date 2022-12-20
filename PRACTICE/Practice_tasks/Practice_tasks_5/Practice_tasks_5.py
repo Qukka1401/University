@@ -18,13 +18,6 @@ def s(filename):
         return 'Количество чисел неправильное'
     except:
         return 'Неизвестная ошибка'
-    finally:
-        try:
-            f.close()
-        except NameError:
-            print('Неверное название')
-        except Exception as ex:
-            print(ex)
-            pass
+
 filename = input('Введите имя файла: ')
 print(s(filename))
