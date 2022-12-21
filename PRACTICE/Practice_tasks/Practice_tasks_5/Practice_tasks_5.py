@@ -1,5 +1,6 @@
 def s(filename):
     try:
+        f = None
         f = open(filename, encoding='utf-8')
         chisla = f.read().splitlines()
         chisla = [int(a) for a in chisla]
@@ -18,6 +19,9 @@ def s(filename):
         return 'Количество чисел неправильное'
     except:
         return 'Неизвестная ошибка'
+    finally:
+        if f is not(None):
+            f.close()
 
 filename = input('Введите имя файла: ')
 print(s(filename))
